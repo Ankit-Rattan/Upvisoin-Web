@@ -1,0 +1,181 @@
+.event-page {
+    padding: 20px;
+    max-width: 100%;
+    background-color: black;
+    margin: 50px auto;
+}
+
+.event-page-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; 
+}
+
+.event-page-title > span {
+    position: relative;
+}
+
+.event-page-title span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #16E6B4;
+    border-radius: 8px;
+    left: 0;
+    bottom: -12px;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.event-poster {
+    position: relative;
+    padding: 20px;
+    background-color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, filter 0.2s;
+    width: 100%;
+    cursor: pointer;
+}
+
+.event-poster:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #16E6BA; 
+}
+
+.event-poster-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: opacity 0.3s; 
+}
+
+.event-poster-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.event-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.331);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.event-popup-content {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 10px 20px rgba(0, 247, 255, 0.5);
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: purple;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.event-popup-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+.event-popup-date-time,
+.event-popup-location {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: aliceblue;
+}
+
+.event-popup-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: whitesmoke;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.view-all-button {
+    background-color: #16E6B4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.view-all-button:hover {
+    background-color: #13ad8a;
+}
+
+@media screen and (max-width: 768px) {
+    .event-page-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .event-grid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .event-page-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .event-poster-title {
+        font-size: 1rem;
+    }
+
+    .view-all-button {
+        font-size: 14px;
+    }
+    .event-grid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

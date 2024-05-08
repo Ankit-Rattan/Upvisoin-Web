@@ -1,0 +1,12 @@
+.img{
+    height:18em;
+     width:17.5em;
+}
+
+@media screen  and (max-width:800px){
+    .img{
+        width : 3rem;
+        height: 3rem;
+
+    }
+}

@@ -1,0 +1,10 @@
+@media screen and (max-width: 1000px) {
+    .preLoader{
+        height: 60%;
+        width: 50%;
+    }
+    /* .loader{
+        height: 50vh;
+        width: fit-content;
+    } */
+}
